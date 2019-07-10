@@ -1,3 +1,12 @@
+Using GCDWebServer
+==================
+
+You start by creating an instance of the ```GCDWebServer``` class. Note that you can have multiple web servers running in the same app as long as they listen on different ports.
+
+Then you add one or more "handlers" to the server: each handler gets a chance to handle an incoming web request and provide a response. Handlers are called in a LIFO queue, so the latest added handler overrides any previously added ones.
+
+Finally you start the server on a given port.
+
 Overview
 ========
 
@@ -253,15 +262,6 @@ int main(int argc, const char* argv[]) {
   return 0;
 }
 ```
-
-Using GCDWebServer
-==================
-
-You start by creating an instance of the ```GCDWebServer``` class. Note that you can have multiple web servers running in the same app as long as they listen on different ports.
-
-Then you add one or more "handlers" to the server: each handler gets a chance to handle an incoming web request and provide a response. Handlers are called in a LIFO queue, so the latest added handler overrides any previously added ones.
-
-Finally you start the server on a given port.
 
 Understanding GCDWebServer's Architecture
 =========================================
